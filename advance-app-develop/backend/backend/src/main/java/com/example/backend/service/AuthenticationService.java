@@ -54,5 +54,6 @@ public class AuthenticationService {
 	public List<UserModal> getData() {
 		return userRepository.findAll();
 	}
+        
 
 }

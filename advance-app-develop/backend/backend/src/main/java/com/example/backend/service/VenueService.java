@@ -1,6 +1,7 @@
 package com.example.backend.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,4 +29,21 @@ public class VenueService {
         repo.deleteById(id);
         return true;
     }
+
+    public String updateData(int id, VenueModal updatedVenue) {
+        Optional<VenueModal> existingVenueOptional = repo.findById(id);
+
+        if (existingVenueOptional.isPresent()) {
+            VenueModal existingVenue = existingVenueOptional.get();
+            existingVenue.setImg(updatedVenue.getImg());
+            existingVenue.setVenueName(updatedVenue.getVenueName());
+            existingVenue.setDetails(updatedVenue.getDetails());
+
+            repo.save(existingVenue);
+            return "Updated";
+        } else {
+            return "Venue not found";
+        }
+    }   
+    
 }

@@ -8,7 +8,6 @@ import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
@@ -30,14 +29,13 @@ import lombok.NoArgsConstructor;
 // @JsonInclude(JsonInclude.Include.NON_NULL)
 @Table(name = "Users")
 public class UserModal implements UserDetails {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name="user_id")
     private Long id;
     private String name;
     private String email;
     private String password;
-//    private Long mobile;
 
     @Enumerated(EnumType.STRING)
     private Role role;

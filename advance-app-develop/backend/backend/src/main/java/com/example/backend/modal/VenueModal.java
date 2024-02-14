@@ -2,6 +2,8 @@ package com.example.backend.modal;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -13,6 +15,11 @@ public class VenueModal {
     private String img;
     private String venueName;
     private String details;
+
+    // @ManyToOne
+    // @JoinColumn(name = "booking_id") // Adjust the column name accordingly
+    // private Booking booking;
+
     public int getId() {
         return id;
     }

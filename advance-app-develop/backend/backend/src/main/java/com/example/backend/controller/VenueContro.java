@@ -8,16 +8,21 @@ import com.example.backend.service.VenueService;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @RestController
-@RequestMapping("")
+
+
+@RequestMapping("/api/v1/auth")
+@CrossOrigin("*")
 public class VenueContro {
 
     @Autowired
@@ -39,5 +44,10 @@ public class VenueContro {
     @DeleteMapping("/delvenue/{id}")
     public boolean deleteById(@PathVariable int id){
         return service.deleteById(id);
+    }
+
+    @PutMapping("/updatevenue/{id}")
+    public String updateVenue(@PathVariable int id, @RequestBody VenueModal updatedVenue) {
+        return service.updateData(id, updatedVenue);
     }
 }

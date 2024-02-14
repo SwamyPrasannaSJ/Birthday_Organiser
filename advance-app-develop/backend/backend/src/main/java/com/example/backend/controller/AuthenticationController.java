@@ -41,5 +41,7 @@ public class AuthenticationController {
     public List<UserModal> getData(){
     	return authenticationService.getData();
     }
+
+    
     
 }

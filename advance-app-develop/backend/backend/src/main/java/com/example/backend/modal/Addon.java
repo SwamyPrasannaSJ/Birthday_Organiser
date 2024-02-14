@@ -1,44 +1,61 @@
 package com.example.backend.modal;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name="addon")
-public class Addon {
 
+public class Addon {
+    
     @Id
     private int id;
-    private String img;
-    private String name;
-    private String details;
+    @Column(name = "number_of_people")
+    private int people;
+    private String cakeRequire;
+    private String duration;
+    private String invitation;
+    private String date;
     public int getId() {
         return id;
     }
     public void setId(int id) {
         this.id = id;
     }
-    public String getImg() {
-        return img;
+    public int getPeople() {
+        return people;
     }
-    public void setImg(String img) {
-        this.img = img;
+    public void setPeople(int people) {
+        this.people = people;
     }
-    public String getName() {
-        return name;
+    public String getCakeRequire() {
+        return cakeRequire;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setCakeRequire(String cakeRequire) {
+        this.cakeRequire = cakeRequire;
     }
-    public String getDetails() {
-        return details;
+    public String getDuration() {
+        return duration;
     }
-    public void setDetails(String details) {
-        this.details = details;
+    public void setDuration(String duration) {
+        this.duration = duration;
+    }
+    public String getInvitation() {
+        return invitation;
+    }
+    public void setInvitation(String invitation) {
+        this.invitation = invitation;
+    }
+    public String getDate() {
+        return date;
+    }
+    public void setDate(String date) {
+        this.date = date;
     }
     public Addon() {
-    
     }
+    
     
 }

@@ -2,8 +2,13 @@ package com.example.backend.modal;
 
 import java.sql.Date;
 
+import jakarta.annotation.Generated;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+// import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -11,76 +16,112 @@ import jakarta.persistence.Table;
 public class Booking {
 
     @Id
-    private int id;
-    private String img;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
     private String venue;
     private String theme;
-    private String addOn;
-    private int people;
-    private String cakeReq;
+    private String additionalRequirements;
+    private int numberOfPeople;
+    private String cakeRequirement;
     private String duration;
-    private String invitation;
-    private Date data;
-    public int getId() {
-        return id;
+    private String invitationRequirements;
+    private String date;
+
+    // @OneToOne(mappedBy = "booking")
+    // private VenueModal ven;
+
+    
+    public Long getId() {
+    return id;
     }
-    public void setId(int id) {
+
+
+    public void setId(Long id) {
         this.id = id;
     }
-    public String getImg() {
-        return img;
-    }
-    public void setImg(String img) {
-        this.img = img;
-    }
+
+
     public String getVenue() {
         return venue;
     }
+
+
     public void setVenue(String venue) {
         this.venue = venue;
     }
+
+
     public String getTheme() {
         return theme;
     }
+
+
     public void setTheme(String theme) {
         this.theme = theme;
     }
-    public String getAddOn() {
-        return addOn;
+
+
+    public String getAdditionalRequirements() {
+        return additionalRequirements;
     }
-    public void setAddOn(String addOn) {
-        this.addOn = addOn;
+
+
+    public void setAdditionalRequirements(String additionalRequirements) {
+        this.additionalRequirements = additionalRequirements;
     }
-    public int getPeople() {
-        return people;
+
+
+    public int getNumberOfPeople() {
+        return numberOfPeople;
     }
-    public void setPeople(int people) {
-        this.people = people;
+
+
+    public void setNumberOfPeople(int numberOfPeople) {
+        this.numberOfPeople = numberOfPeople;
     }
-    public String getCakeReq() {
-        return cakeReq;
+
+
+    public String getCakeRequirement() {
+        return cakeRequirement;
     }
-    public void setCakeReq(String cakeReq) {
-        this.cakeReq = cakeReq;
+
+
+    public void setCakeRequirement(String cakeRequirement) {
+        this.cakeRequirement = cakeRequirement;
     }
+
+
     public String getDuration() {
         return duration;
     }
+
+
     public void setDuration(String duration) {
         this.duration = duration;
     }
-    public String getInvitation() {
-        return invitation;
+
+
+    public String getInvitationRequirements() {
+        return invitationRequirements;
     }
-    public void setInvitation(String invitation) {
-        this.invitation = invitation;
+
+
+    public void setInvitationRequirements(String invitationRequirements) {
+        this.invitationRequirements = invitationRequirements;
     }
-    public Date getData() {
-        return data;
+
+
+    public String getDate() {
+        return date;
     }
-    public void setData(Date data) {
-        this.data = data;
+
+
+    public void setDate(String date) {
+        this.date = date;
     }
+
+
     public Booking() {
     }
 
