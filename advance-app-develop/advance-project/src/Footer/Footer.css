@@ -1,0 +1,9 @@
+.footer {
+  font-family: "Roboto", sans-serif;
+  margin-top: 7%;
+  color: black;
+  /* position: absolute; */
+}
+.footer p{
+    color: black;
+}

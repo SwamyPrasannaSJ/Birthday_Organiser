@@ -22,4 +22,9 @@ public class AddionalService {
     public List<AdditonalModal> getData(){
         return repo.findAll();
     }
+
+    public String deleteData(int id) {
+        repo.deleteById(id);
+        return "Deleted";
+    }
 }

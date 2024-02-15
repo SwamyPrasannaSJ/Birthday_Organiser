@@ -4,7 +4,9 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.backend.modal.AdditonalModal;
@@ -32,6 +34,11 @@ public class AddionalContro {
     public String add(@RequestBody AdditonalModal addion){
 
         return service.addData(addion);
+    }
+
+      @DeleteMapping("/deleteaddion/{id}")
+    public String delete(@PathVariable int id) {
+        return service.deleteData(id);
     }
     
     

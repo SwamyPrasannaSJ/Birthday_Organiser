@@ -1,0 +1,69 @@
+.container-fluid {
+  background-image: url(https://img.freepik.com/free-photo/beautiful-scenery-summit-mount-everest-covered-with-snow-white-clouds_181624-21317.jpg?w=740&t=st=1668690713~exp=1668691313~hmac=4e4699858732639ca9e2569c11c7fb5bf5ec04a636160c3218002ffad281414c);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.row {
+  padding: 3rem;
+}
+
+.col-sm-4 {
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 5rem;
+  margin-top: 3rem;
+  box-shadow: 0px 0px 5px 5px rgba(275, 275, 275, 0.55);
+  background-color: rgba(275, 275, 275, 0.55);
+  border-radius: 15px;
+}
+
+.text-center {
+  font-weight: 900;
+  font-family: "segoe ui symbol";
+}
+
+.mb-0 {
+  font-weight: 700;
+  font-family: "segoe ui symbol";
+  font-size: 14px;
+}
+
+.feedback-form {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.col-sm-12 {
+  width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.mt-3 {
+  margin-top: 1rem;
+}
+
+.p-3 {
+  padding: 1rem;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+#standard-basic1,
+#standard-basic2,
+#standard-basic3,
+#standard-basic4 {
+  width: 100%;
+  margin-bottom: 1rem;
+}

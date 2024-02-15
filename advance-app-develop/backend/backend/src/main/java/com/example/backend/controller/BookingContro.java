@@ -17,7 +17,7 @@ import com.example.backend.modal.Booking;
 import com.example.backend.service.BookingService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin("*")
 @RequestMapping("/api/v1/auth")
 
 public class BookingContro {

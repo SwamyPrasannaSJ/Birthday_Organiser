@@ -1,0 +1,31 @@
+/* Default styles */
+.admin-dashboard {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboard-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.chart-container {
+  margin-top: 20px;
+}
+
+/* Media Query for laptops */
+@media only screen and (max-width: 1366px) {
+  .admin-dashboard {
+    max-width: 1000px;
+    padding: 15px;
+  }
+}
+
+/* Media Query for smaller laptops */
+@media only screen and (max-width: 1280px) {
+  .admin-dashboard {
+    max-width: 800px;
+    padding: 10px;
+  }
+}
